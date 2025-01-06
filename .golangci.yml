@@ -1,0 +1,34 @@
+---
+linters:
+  disable-all: true
+  enable:
+    - govet
+    - staticcheck
+    - gocritic
+    # - gosec # ignore for some time
+    - gofmt
+    - goimports
+    - errcheck
+    - gosimple
+    - unused
+    - unconvert
+    - goconst
+    - gocyclo
+    - revive
+    # - gochecknoglobals # ignore because i have global variables
+
+linters-settings:
+  wrapcheck:
+    ignoreSigs:
+      - .JSON
+      - .NewHTTPError
+      - .Redirect
+      - .NoContent
+      - .Errorf(
+      - errors.New(
+      - errors.Unwrap(
+      - .Wrap(
+      - .Wrapf(
+      - .WithMessage(
+      - .WithMessagef(
+      - .WithStack(    
